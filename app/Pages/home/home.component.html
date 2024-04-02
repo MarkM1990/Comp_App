@@ -1,0 +1,9 @@
+<mat-toolbar class="toolbar">
+    <span>Complaint Dashboard</span>
+    <Div class="spacer"></Div>
+    <a mat-button class="Button" routerLink="CompList">Kunden Beanstandungen</a>
+    <a mat-button class="Button" (click)="LieferList()">Lieferanten Beanstandungen</a>
+    <a mat-button class="Button" (click)="Reporting()">Reporting</a>
+    <a mat-button class="Button" (click)="navigateToLogin()">Logout</a>
+</mat-toolbar>
+<router-outlet></router-outlet>

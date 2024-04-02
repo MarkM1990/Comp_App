@@ -1,0 +1,19 @@
+<body>
+    <header class="header">Complaint App</header>
+    <form class="loginform">
+      <div>
+        <input class="username" type="text" name="username" placeholder="Username" id="username" [(ngModel)]="username">
+      </div>
+      <div>
+        <input class="password" type="password" name="password" placeholder="Password" id="password" [(ngModel)]="password">
+      </div>
+      <div>
+        <a mat-button class="loginbutton" (click)="login()">Login</a>
+      </div>
+    </form>
+  
+    <form class="footer">
+      <img src="./assets/cloud_logo.png" class="logo">
+    </form>
+  
+  </body>

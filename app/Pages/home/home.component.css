@@ -1,0 +1,20 @@
+.spacer{
+    flex: auto;
+}
+
+.toolbar {
+    background-color: #1c2e50;
+    box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.toolbar span {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+  

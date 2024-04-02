@@ -1,0 +1,28 @@
+.BEAGinput {
+    width: 700px;
+}
+
+.toolbar {
+    background-color: #1c2e50;
+    box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.toolbar a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.toolbar span {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Button {
+    background-color: rgba(28, 46, 80, 1);
+    color: white;
+  }
+  
+  .Button:hover {
+    background-color: rgba(28, 46, 80, 0.7);
+  }

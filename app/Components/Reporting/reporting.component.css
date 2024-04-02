@@ -1,0 +1,24 @@
+
+  .erfassenButton .Button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  .Button {
+    background-color: rgba(28, 46, 80, 1);
+    color: white;
+  }
+  
+  .Button:hover {
+    background-color: rgba(28, 46, 80, 0.7);
+  }
+
+  .chart-container {
+    display: flex;
+    margin-bottom: 60px;
+  }
+  
+
+  

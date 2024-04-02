@@ -1,0 +1,70 @@
+<div>
+    <mat-toolbar class="toolbar">
+        <span>Beanstandung bearbeiten</span>
+    </mat-toolbar>
+</div>
+
+<form class="form" [formGroup]="beanstandungForm">
+    <table class="table"><tr>
+        <td><mat-form-field>
+            <mat-label>Kunde</mat-label>
+            <input matInput formControlName="Kunde" id="Kunde">
+        </mat-form-field></td>
+        <td><mat-form-field>
+            <mat-label>Teilenummer</mat-label>
+            <input matInput formControlName="Teilenummer" id="Teilenummer">
+        </mat-form-field></td>
+        <td><mat-form-field style="width: 270px;">
+            <mat-label>Teilebezeichnung</mat-label>
+            <input matInput formControlName="Teilebezeichnung" id="Teilebezeichnung">
+        </mat-form-field></td>
+    </tr></table>
+
+    <table><tr>
+        <td><mat-form-field style="width: 700px;">
+            <mat-label>Beanstandungsgrund</mat-label>
+            <input matInput formControlName="Beanstandungsgrund" id="Beanstandungsgrund">
+        </mat-form-field></td>
+    </tr></table>
+    <table><tr>
+        <td><mat-form-field class="BEAGinput">
+            <mat-label>Details</mat-label>
+            <textarea matInput formControlName="Details" id="Details" #message maxlength="5000"></textarea>
+            <mat-hint align="end">{{message.value.length}} / 5000</mat-hint>
+        </mat-form-field></td>
+    </tr></table>
+    <table><tr>
+        <td><mat-form-field>
+            <mat-label>CQA</mat-label>
+            <input matInput formControlName="CQA" id="CQA">
+        </mat-form-field></td>
+        <td><mat-form-field>
+            <mat-label>Datum wählen</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="Datum" id="Datum">
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field></td>
+        <td><mat-form-field style="width: 230px;">
+            <mat-label>Kosten</mat-label>
+            <input matInput formControlName="Kosten" id="Kosten">
+        </mat-form-field></td>
+    </tr></table>
+    <table><tr>
+        <td><mat-form-field>
+            <mat-label>Abgeschlossen</mat-label>
+            <mat-select formControlName="Abgeschlossen" id="Abgeschlossen">
+                <mat-option value="Ja">Ja</mat-option>
+                <mat-option value="Nein">Nein</mat-option>
+            </mat-select>
+        </mat-form-field></td>
+    </tr></table>
+</form>
+
+<mat-list class="matlist">
+    <mat-list-item>mit * markierte Felder sind Pflichtfelder</mat-list-item>
+</mat-list>
+
+<div>
+    <a mat-button mat-button class="Button" (click)="Transfair()">Daten an die API senden</a>
+</div>
