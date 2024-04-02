@@ -2,7 +2,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 10px;
-  margin-right: 10px; /* Setzt den Außenabstand auf der rechten Seite */
+  margin-right: 10px;
 }
 
 .Button {
@@ -14,14 +14,14 @@
   background-color: rgba(28, 46, 80, 0.7);
 }
 
-/* Structure */
+
 table {
   width: 100%;
 }
 
 .td:hover {
-  background-color: #ececec; /* Light grey color; adjust as needed */
-  cursor: pointer; /* Changes the cursor to a pointer to indicate the row is clickable */
+  background-color: #ececec;
+  cursor: pointer;
 }
 
 
