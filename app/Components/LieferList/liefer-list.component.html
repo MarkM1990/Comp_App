@@ -11,49 +11,42 @@
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort (dblclick)="openLIEFBEARBModal($event)">
 
-    <!-- ID Column -->
+
     <ng-container matColumnDef="ID">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
       <td class="td" mat-cell *matCellDef="let element"> {{element.ID}} </td>
     </ng-container>
 
-    <!-- Datum Column -->
     <ng-container matColumnDef="Date">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
       <td class="td" mat-cell *matCellDef="let element"> {{element.Date}} </td>
     </ng-container>
 
-    <!-- Kunde Column -->
     <ng-container matColumnDef="Lieferant">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Lieferant </th>
       <td class="td" mat-cell *matCellDef="let element"> {{element.Lieferant}} </td>
     </ng-container>
 
-    <!-- Teilenummer Column -->
     <ng-container matColumnDef="Teilenummer">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Teilenummer </th>
       <td class="td" mat-cell *matCellDef="let element"> {{element.Teilenummer}} </td>
     </ng-container>
 
-    <!-- Teilebezeichnung Column -->
     <ng-container matColumnDef="Teilebezeichnung">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Teilebezeichnung </th>
       <td class="td" mat-cell *matCellDef="let element"> {{element.Teilebezeichnung}} </td>
     </ng-container>
 
-    <!-- Beanstandungsgrund Column -->
     <ng-container matColumnDef="Beanstandungsgrund">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Beanstandungsgrund </th>
       <td class="td" mat-cell *matCellDef="let element"> {{element.Beanstandungsgrund}} </td>
     </ng-container>
 
-    <!-- CQA Column -->
     <ng-container matColumnDef="SQA">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> SQA </th>
       <td class="td" mat-cell *matCellDef="let element"> {{element.SQA}} </td>
     </ng-container>
 
-    <!-- Abgeschlossen Column -->
     <ng-container matColumnDef="Abgeschlossen">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Abgeschlossen </th>
       <td class="td" mat-cell *matCellDef="let element"> {{element.Abgeschlossen ? 'Ja' : 'Nein'}} </td>
@@ -62,7 +55,6 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-    <!-- Zeile, die angezeigt wird, wenn keine übereinstimmenden Daten vorhanden sind. -->
     <tr class="mat-row" *matNoDataRow>
       <td class="mat-cell" colspan="8">Kein passender Datensatz gefunden mit: "{{input.value}}"</td>
     </tr>
