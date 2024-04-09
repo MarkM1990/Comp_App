@@ -91,8 +91,7 @@ def get_data2():
     cursor.execute("SELECT ID, Date, Lieferant, Teilenummer, Teilebezeichnung, Beanstandungsgrund, SQA, Abgeschlossen FROM la1")
     result = cursor.fetchall()
     cursor.close()
-    # Stelle sicher, dass "Teilebezeichnung" korrekt geschrieben ist und alle Felder entsprechend der SELECT-Anweisung enthalten sind.
-    data = [{"ID": row[0], "Date": row[1], "Lieferant": row[2], "Teilenummer": row[3], "Teilebezeichnung": row[4], "Beanstandungsgrund": row[5], "SQA": row[6], "Abgeschlossen": bool(row[7])} for row in result]  # Hinzufügen des "Details"-Feldes
+    data = [{"ID": row[0], "Date": row[1], "Lieferant": row[2], "Teilenummer": row[3], "Teilebezeichnung": row[4], "Beanstandungsgrund": row[5], "SQA": row[6], "Abgeschlossen": bool(row[7])} for row in result] 
     return jsonify(data), 200
 
 @app.route('/KBeanstandunge-abf/anp', methods=['POST'])
